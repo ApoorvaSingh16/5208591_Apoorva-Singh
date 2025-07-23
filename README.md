@@ -1,5 +1,6 @@
 # 5208591_Apoorva-Singh
 ## screenshot of the agile course
-![Screenshot]("Agile course completion.png")
+<img src="Agile_course_completion.png" alt="screenshot" width="300"/>
+
 
 
