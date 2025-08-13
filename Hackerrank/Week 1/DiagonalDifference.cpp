@@ -14,17 +14,17 @@ vector<string> split(const string &);
  */
 
 int diagonalDifference(vector<vector<int>> arr) {
-    int left_sum =0;
-    int right_sum=0;
+    int sum_of_left =0;
+    int sum_of_right=0;
    int j = arr.size()-1;
     
     for(int i =0; i<arr.size();i++)
     {
-        left_sum += arr[i][i];
-        right_sum += arr[i][j];
+        sum_of_left += arr[i][i];
+        sum_of_right += arr[i][j];
         j--;
     }
-    return abs(left_sum - right_sum);
+    return abs(sum_of_left - sum_of_right);
     
 
 }
@@ -102,3 +102,4 @@ vector<string> split(const string &str) {
 
     return tokens;
 }
+
