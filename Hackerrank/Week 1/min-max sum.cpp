@@ -13,24 +13,23 @@ vector<string> split(const string &);
  */
 
 void miniMaxSum(vector<int> arr) {
-    long long sum =0;  
-    long p =arr.size();
-    
-    for(int i =0;i<n;i++){
-        sum+= arr[i];
+    long long minSum =0, maxSum =0;
+    int n =arr.size();
+    int min_index =0, max_index=0;
+    for(int i=1; i<n;i++)
+    {
+        if(arr[i]<arr[min_index])min_index = i;
+        if(arr[i]>arr[max_index])max_index =i;
     }
-    long long initial_sum = sum - arr[0];
-    long long minSum = initial_sum;
-    long long maxSum =initial_sum;
-    
-    for(int i=1;i<n;i++){
-        long long lastSum = sum - arr[i];
-        if (lastSum < minSum)
-          minSum = lastSum;
-        if (lastSum > maxSum)
-          maxSum = lastSum;
+    for(int i =0;i<n;i++)
+    {
+        if(i !=max_index)minSum += arr[i];
     }
-    cout<<minSum<< " "<<maxSum<<endl;
+    for(int i =0 ;i<n;i++)
+    {
+        if(i != min_index)maxSum +=arr[i];
+    }
+    cout<< minSum << " " << maxSum << endl;
 
 
 }
@@ -94,4 +93,3 @@ vector<string> split(const string &str) {
 
     return tokens;
 }
-
