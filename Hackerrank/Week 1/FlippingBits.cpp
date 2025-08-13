@@ -13,8 +13,8 @@ string rtrim(const string &);
  */
 
 long flippingBits(long n) {
-    long x = pow(2,32)-1;
-    long solution = x - n;
+    long p = pow(2,32)-1;
+    long solution = p - n;
     return solution; 
 
 
@@ -66,3 +66,4 @@ string rtrim(const string &str) {
 
     return s;
 }
+
